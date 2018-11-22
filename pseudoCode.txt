@@ -1,0 +1,7 @@
+#5 Character generator
+
+If choice = 1  //All lowercase generator
+	while an integer charCount < passLength,
+		generate random number
+		convert random number to character
+		Write character to file
