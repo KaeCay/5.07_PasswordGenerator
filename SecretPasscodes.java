@@ -30,8 +30,9 @@ public class SecretPasscodes
        
        //Variables
        Scanner in = new Scanner (System.in);
+       File genPass = new File ("generatedPass.txt");
        Random charGen = new Random();
-       PrintWriter charWrite = new PrintWriter (new File ("generatedPass.txt"));
+       PrintWriter charWrite = new PrintWriter (genPass);
        int choice;
        int passLength;
        
@@ -60,7 +61,7 @@ public class SecretPasscodes
            passLength = in.nextInt();
         }
         
-       if (choice == 1) // Starts All lowercase generator
+       if (choice == 1) //All lowercase generator
        {
            for (int charCount = 0; charCount < passLength; charCount++)
            {
@@ -69,7 +70,7 @@ public class SecretPasscodes
                charWrite.print(entry);
            }
        }
-       else if (choice == 2) 
+       else if (choice == 2) //All uppercase generator
        {
           for (int charCount = 0; charCount < passLength; charCount++)
           {
@@ -80,6 +81,19 @@ public class SecretPasscodes
        }
 
        charWrite.close();
+
+       Scanner charRead = new Scanner (genPass);  //initialize reader for generated password
+       String password = ""; //initialize password variable
+       while (charRead.hasNext())
+       {
+            password += charRead.next();
+       }
+       charRead.close();
+
+       System.out.println();
+       System.out.println("Here is your new password!");
+       System.out.println(password);
+
     }
 }
 
