@@ -29,16 +29,18 @@ public class SecretPasscodes
        System.out.println("________________________________________");
        
        //Variables
-       Scanner in = new Scanner (System.in);
-       File genPass = new File ("generatedPass.txt");
-       Random charGen = new Random();
-       PrintWriter charWrite = new PrintWriter (genPass);
        boolean quit = false;
        int choice;
        int passLength;
        
        while (quit == false)
        {
+         //Recurring variables
+         Scanner in = new Scanner (System.in);
+         File genPass = new File ("generatedPass.txt");
+         Random charGen = new Random();
+         PrintWriter charWrite = new PrintWriter (genPass);
+         
          //Output
          System.out.print("Select a category (1-6): ");
          choice = in.nextInt();
