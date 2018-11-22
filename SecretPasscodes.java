@@ -95,12 +95,26 @@ public class SecretPasscodes
             int character = charGen.nextInt((122 - 97) + 1) + 97;  //lowercase letter
             char entry = (char)character;
             charWrite.print(entry);
-            charCount++; //acount for character
+            charCount++; //count extra character
 
             character = charGen.nextInt((57 - 48)+ 1) + 48;  //number
             entry = (char)character;
             charWrite.print(entry);
           }
+       }
+       else if (choice == 5) //Uppercase, numbers generator
+       {
+        for (int charCount = 0; charCount < passLength; charCount++)
+          {
+              int character = charGen.nextInt((90 - 65)+ 1) + 65; //upeprcase letter
+              char entry = (char)character;
+              charWrite.print(entry); 
+              charCount++; //count extra character
+
+              character = charGen.nextInt((57 - 48)+ 1) + 48;  //number
+              entry = (char)character;
+              charWrite.print(entry);
+          } 
        }
 
 
