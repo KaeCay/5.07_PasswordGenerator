@@ -79,6 +79,17 @@ public class SecretPasscodes
               charWrite.print(entry);
           } 
        }
+       else if (choice == 3) //All numbers generator
+       {
+          for (int charCount = 0; charCount < passLength; charCount++)
+          {
+            int character = charGen.nextInt((57 - 48)+ 1) + 48;
+            char entry = (char)character;
+            charWrite.print(entry);
+          }
+       }
+
+
 
        charWrite.close();
 
@@ -96,4 +107,3 @@ public class SecretPasscodes
 
     }
 }
-
