@@ -18,6 +18,7 @@ WHAT WENT RIGHT?
 - generating all lowercase passwords
 - generating all uppercase passwords
 - generating all numbers passwords
+- generating lowercase, numbers passwords
 
 WHAT WENT WRONG?
 - mismatch exceptions / crash when an integer was not inputted
